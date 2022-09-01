@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="7.588">
-<testcase classname="Login" name="Valid user login" time="0.531">
-<system-out><![CDATA[Given I am at the login page................................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="8.757">
+<testcase classname="Register" name="Register a Valid user" time="1.644">
+<system-out><![CDATA[Given I am on the registration page.........................................passed
+When I type in a valid and unique email of "newestuser1@a.am"...............passed
+And I type in a valid password of "Password123!"............................passed
+And I type in a valid first name of "Guy" in registration...................passed
+And I type in a valid last name of "Gardner" in registration................passed
+And I type in a valid phone number of "000-000-0000"........................passed
+And I click on the register submit button...................................passed
+Then I should be redirected to the login.html...............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login" name="Valid user login 2" time="0.514">
-<system-out><![CDATA[Given I am at the login page................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Login" name="Valid user login 3" time="0.495">
-<system-out><![CDATA[Given I am at the login page................................................passed
+<testcase classname="Register" name="Login as new user" time="2.43">
+<system-out><![CDATA[Given I am at the home page.................................................passed
+When I type in a username "newestuser1@a.am" on the home page...............passed
+And I type in a password "Password123!" on the home page....................passed
+And I click on the login button on home page................................passed
+Then I should be redirected to the user-page.html...........................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -87,10 +87,7 @@ public class UserPage {
     public UserPage(WebDriver driver) throws InterruptedException {
         this.driver = driver;
         this.wdw = new WebDriverWait(driver, Duration.ofSeconds(10));
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.typeUsername("jd80@a.ca");
-        loginPage.typePassword("Password123!");
-        loginPage.clickLogin();
+
         PageFactory.initElements(driver, this);
 //        wdw.until(ExpectedConditions.textToBePresentInElement(balanceWebElement, "$"));
         Thread.sleep(500);
@@ -176,10 +173,11 @@ public class UserPage {
     }
 
     public void clickLogoutButton() throws InterruptedException {
-//        driver.manage().window().maximize();
+        driver.manage().window().maximize();
         Thread.sleep(500);
         wdw.until(ExpectedConditions.visibilityOf(logoutButton));
         logoutButton.click();
+        Thread.sleep(500);
     }
 
     public void clickMyAccountsButton(){
