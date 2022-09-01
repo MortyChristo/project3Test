@@ -87,9 +87,7 @@ public class UserPage {
     public UserPage(WebDriver driver) throws InterruptedException {
         this.driver = driver;
         this.wdw = new WebDriverWait(driver, Duration.ofSeconds(10));
-
         PageFactory.initElements(driver, this);
-//        wdw.until(ExpectedConditions.textToBePresentInElement(balanceWebElement, "$"));
         Thread.sleep(500);
         this.originalBalance = getCurrentBalance();
     }
