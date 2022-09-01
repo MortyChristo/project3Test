@@ -23,7 +23,7 @@ public class UserPageSteps {
 
     @Given("that I login as a user")
     public void loginAsUser() throws InterruptedException {
-
+        driver.get(url+"/login.html");
 //        wdw.until(ExpectedConditions.urlContains("login.html"));
         LoginPage loginPage = new LoginPage(driver);
         loginPage.typeUsername("jd80@a.ca");

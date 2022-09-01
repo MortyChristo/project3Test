@@ -26,7 +26,7 @@ public class PendingTransactionsSteps {
     }
 
     @And("I click on the deny transaction button")
-    public void iClickOnTheDenyTransactionButton() {
+    public void iClickOnTheDenyTransactionButton() throws InterruptedException {
         pendingTransactionPage.clickDenyFirstRequestButton();
     }
 

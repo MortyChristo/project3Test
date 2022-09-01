@@ -54,8 +54,10 @@ public class PendingTransactionPage {
         Thread.sleep(400);
     }
 
-    public void clickDenyFirstRequestButton(){
+    public void clickDenyFirstRequestButton() throws InterruptedException {
         denyFirstRequestButton.click();
+        Thread.sleep(400);
+
     }
 
     public void clickUserPageButton(){
