@@ -61,7 +61,8 @@ public class RedirectedSteps {
     }
     @Then("I should be redirected to the login.html")
     public void iShouldBeRedirectedToTheLoginHtml() throws InterruptedException {
-        wdw.until(ExpectedConditions.urlContains("login.html"));
+//        wdw.until(ExpectedConditions.urlContains("login.html"));
+        Thread.sleep(500);
         String actual = driver.getCurrentUrl();
         String expected = url + "/login.html";
         Assert.assertEquals(actual, expected);
